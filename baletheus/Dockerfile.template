@@ -3,4 +3,4 @@ RUN install_packages git && mkdir -p /app/data
 COPY . /app/
 WORKDIR /app
 RUN npm install && npm run build
-CMD ["entry.sh"]
+CMD ["bash", "./entry.sh"]

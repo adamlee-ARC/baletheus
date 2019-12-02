@@ -7,4 +7,4 @@ RUN install_packages apt-transport-https libcap2-bin jq && \
     apt-get update && \
     install_packages wget adduser libfontconfig grafana && \
     chown -R root:grafana /app/provisioning
-CMD [ "entry.sh" ]
+CMD ["bash", "./entry.sh"]
