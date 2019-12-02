@@ -1,5 +1,5 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-golang:1.12.1
 WORKDIR /app
-ADD . /app/
+COPY . /app/
 RUN install_packages git && go get github.com/prometheus/prometheus/cmd/...
-CMD ["/app/entry.sh"]
+CMD ["entry.sh"]
